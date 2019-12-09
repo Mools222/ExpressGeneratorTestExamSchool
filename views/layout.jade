@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='description', content='Eksamensopgave')
+        meta(name='keywords', content='eksamen, html, css, javascript')
+        meta(name='author', content='Morten Olsen')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        // Header
+        header
+            h1 TwinShips
+            p Fremtidens Skibssystem
+        // Navbar
+        - var navbar = { 'Start': '/', 'Statisk HTML Table': '/table', 'Dynamisk HTML Table': '/ships', 'Skibe som JSON': '/api/ships', 'Vejrdata som JSON': '/module'};
+        .navbar
+            each val, key in navbar
+                a(href=val)= key
+        // Content
+        block content
+        // Footer
+        footer
+            p Skabt af Morten Olsen
+            p#dateTime Test
+        script(src='/javascripts/scripts.js')

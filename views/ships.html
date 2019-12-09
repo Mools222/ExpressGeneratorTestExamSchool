@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TwinShips</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<div class="content">
+
+    <h1>TwinShips</h1>
+
+    <div class="formContainer">
+        <form action="/action_page.php">
+            <label for="user">Brugernavn</label>
+            <input type="text" id="user" name="user" placeholder="Brugernavn...">
+            <label for="pass">Last Name</label>
+            <input type="text" id="pass" name="kodeord" placeholder="Kodeord...">
+            <input type="submit" value="Log ind">
+        </form>
+    </div>
+
+    <h2>Skibsdata</h2>
+
+    <table>
+        <tr>
+            <th>Navn</th>
+            <th>Hjemhavn</th>
+            <th>Kaldesignal</th>
+            <th>MMSI-nummer</th>
+            <th>Anvendelse</th>
+            <th>BRT/BT</th>
+            <th>Længde</th>
+            <th>Maks antal om bord</th>
+        </tr>
+        <tr>
+            <td>Skibladner II</td>
+            <td>København</td>
+            <td>OWYE</td>
+            <td>219000446</td>
+            <td>Skibet anvendes som øvelsesskib for FDF Københavns Søkreds</td>
+            <td>43</td>
+            <td>18,5</td>
+            <td>24</td>
+        </tr>
+    </table>
+
+    <h2>Sensordata</h2>
+
+    <table>
+        <tr>
+            <th>Tid</th>
+            <th>MMSI-nummer</th>
+            <th>Fart</th>
+            <th>Kurs</th>
+            <th>GPS Koordinater</th>
+            <th>Vindretning</th>
+            <th>Vindstyrke (m/s)</th>
+            <th>Temperatur (C)</th>
+            <th>Omdrejning for alle motorer (rotation/m)</th>
+        </tr>
+        <tr>
+            <td>2019-12-09 09:35:16</td>
+            <td>219000446</td>
+            <td>21,7</td>
+            <td>Nordvest</td>
+            <td>41°24'12.2"N 2°10'26.5"E</td>
+            <td>247</td>
+            <td>4,4</td>
+            <td>13</td>
+            <td>3700</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+extends layout
+
+block content
+    .content
+        h1 TwinShips
+        .formContainer
+            form(action='/SOMEPLACE', method='post')
+                label(for='user') Brugernavn
+                input#user(type='text', name='user', placeholder='Brugernavn...')
+                label(for='pass') Last Name
+                input#pass(type='text', name='kodeord', placeholder='Kodeord...')
+                input(type='submit', value='Log ind')
+        h2 Skibsdata
+        table
+            thead
+                tr
+                    th Navn
+                    th Hjemhavn
+                    th Kaldesignal
+                    th MMSI-nummer
+                    th Anvendelse
+                    th BRT/BT
+                    th Længde
+                    th Maks antal om bord
+            tbody
+                each ship in shipData
+                    tr
+                        td #{ship.navn}
+                        td #{ship.hjemhavn}
+                        td #{ship.kaldesignal}
+                        td #{ship.MMSI_nummer}
+                        td #{ship.Anvendelse}
+                        td #{ship.BRT_BT}
+                        td #{ship.Laengde}
+                        td #{ship.max_antal_om_bord}
+        h2 Sensordata
+        table
+            thead
+                tr
+                    th Tid
+                    th MMSI-nummer
+                    th Fart
+                    th Kurs
+                    th GPS Koordinater
+                    th Vindretning
+                    th Vindstyrke (m/s)
+                    th Temperatur (C)
+                    th Omdrejning for alle motorer (rotation/m)
+            tbody
+                each sensor in sensorData
+                    tr
+                        td #{sensor.tid}
+                        td #{sensor['MMSI_nummer']}
+                        td #{sensor.fart}
+                        td #{sensor.kurs}
+                        td #{sensor.gps_koordinater}
+                        td #{sensor.vindretning}
+                        td #{sensor['Vindstyrke_(m/s)']}
+                        td #{sensor['Temperatur_(C)']}
+                        td #{sensor['Omdrejning_(rotation/m)']}
+
