@@ -1,10 +1,9 @@
 extends layout
 
 block content
-    .content
-        h1 Weather module
-        .formContainer
-            form(action='/module', method='post')
-                label(for='town') By
-                input#town(type='text', name='location', placeholder='Indtast by...')
-                input(type='submit', value='Hent vejrdata')
+    h1 Weather module
+    .formContainer
+        form(action='/module', method='post')
+            label(for='town') By
+            input#town(type='text', name='location', placeholder='Indtast by...')
+            input(type='submit', value='Hent vejrdata')

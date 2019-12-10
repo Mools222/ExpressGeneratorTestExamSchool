@@ -19,9 +19,11 @@ html
             each val, key in navbar
                 a(href=val)= key
         // Content
-        block content
+        .content
+            block content
         // Footer
+        - var date = new Date();
         footer
             p Skabt af Morten Olsen
-            p#dateTime Test
+            p#dateTime= date.toDateString()
         script(src='/javascripts/scripts.js')
